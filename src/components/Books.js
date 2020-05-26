@@ -5,7 +5,10 @@ const Books = props => (
         {props.books.map((book) =>{
         return (
           <div id="book_container" key = {book.id}>
-            <img src={book.volumeInfo.imageLinks?.thumbnail} alt={book.volumeInfo.title} />
+            <img src={
+                book.volumeInfo.imageLinks === undefined
+                ? null
+                : `${book.volumeInfo.imageLinks.thumbnail}`} />
             <p>{ book.volumeInfo.title }</p>
           </div>
         )

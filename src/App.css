@@ -1,6 +1,20 @@
 #searchbutton {
   margin-bottom: 20px;
+  margin: 20px;
+  width: 25%;
+  height: 30px
+}
 
+#searchbutton:hover {
+  background-color: #cfcfcf;
+  cursor: pointer;
+}
+
+
+#searchbar {
+  width: 80%;
+  height: 30px;
+  font-size: 20px
 }
 
 #wrapper {
