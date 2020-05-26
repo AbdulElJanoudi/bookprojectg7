@@ -1,3 +1,22 @@
+#searchbutton {
+  margin-bottom: 20px;
+
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#book_container {
+  width: 200px;
+}
+
+
+
+
 .App {
   text-align: center;
   background-color: #282c34;
