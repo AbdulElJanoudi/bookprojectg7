@@ -1,75 +1,90 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+.App {
+    text-align: center;
+    margin: 0 50px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-template-rows: auto;
+    grid-template-areas: "header header" "nav nav" "main main" "footer footer";
+}
+
+header {
+    grid-area: header;
+    background-color: rgb(156, 144, 144);
+}
+
+nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: flex-start;
+    align-self: center;
+    background-color: #282c34;
+    height: 100%;
+}
+
+.nav-active-style {
+    text-decoration: underline;
+    color: white;
+}
+
+nav>ul {
+    list-style-type: none;
+    display: flex;
+    width: 100%;
+}
+
+nav>ul>a>li {
+    margin-left: 10px;
+}
+
+nav>ul>a {
+    text-decoration: none;
+}
+
+main {
+    grid-area: main;
+    padding: 10px;
+    background-color: rgb(209, 207, 207);
+}
+
+footer {
+    grid-area: footer;
+    text-align: center;
+    background-color: #282c34;
+    color: white;
+}
+
 #searchbutton {
-  margin-bottom: 20px;
-  margin: 20px;
-  width: 25%;
-  height: 30px
+    margin-bottom: 20px;
+    margin: 20px;
+    width: 25%;
+    height: 30px
 }
 
 #searchbutton:hover {
-  background-color: #cfcfcf;
-  cursor: pointer;
+    background-color: #cfcfcf;
+    cursor: pointer;
 }
 
-
 #searchbar {
-  width: 80%;
-  height: 30px;
-  font-size: 20px
+    width: 80%;
+    height: 30px;
+    font-size: 20px
 }
 
 #wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 #book_container {
-  width: 200px;
-}
-
-
-
-
-.App {
-  text-align: center;
-  background-color: #282c34;
-  color: white;
-  margin: 0 50px;
-  padding: 10px;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    width: 200px;
 }

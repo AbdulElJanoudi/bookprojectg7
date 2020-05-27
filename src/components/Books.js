@@ -8,7 +8,7 @@ const Books = props => (
             <img src={
                 book.volumeInfo.imageLinks === undefined
                 ? null
-                : `${book.volumeInfo.imageLinks.thumbnail}`} />
+                : `${book.volumeInfo.imageLinks.thumbnail}`} alt="A book cover" />
             <p>{ book.volumeInfo.title }</p>
           </div>
         )
