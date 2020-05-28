@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 
 import Home from "./components/Home"
-import MovieLib from "./components/MovieLib"
+import BookLib from "./components/BookLib"
 import Form from "./components/Form"
 import Books from "./components/Books"
 import Header from "./components/Header"
@@ -43,7 +43,7 @@ class App extends Component {
 
           <main>
             <Switch>
-              <Route path="/movielib" exact component={MovieLib} />
+              <Route path="/booklib" exact component={BookLib} />
               <Route path="/" exact component={Home} />
             </Switch>
             <Form getBook={this.getBook} />

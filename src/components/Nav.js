@@ -10,7 +10,7 @@ export default function Nav() {
 
                 <ul>
                     <NavLink exact activeClassName="nav-active-style" to='/'> <li> Startsida </li> </NavLink>
-                    <NavLink activeClassName="nav-active-style" to='/movielib'> <li> Bokbibliotek </li> </NavLink>
+                    <NavLink activeClassName="nav-active-style" to='/booklib'> <li> Bokbibliotek </li> </NavLink>
                 </ul>
             </nav>
 

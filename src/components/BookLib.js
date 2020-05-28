@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function MovieLib() {
+export default function BookLib() {
     return (
         <div>
             <h2> Bokbibliotek</h2>
