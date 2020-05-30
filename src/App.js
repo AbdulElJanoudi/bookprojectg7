@@ -1,15 +1,7 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-
-
-
-import Home from "./components/Home"
-import BookLib from "./components/BookLib"
 import Form from "./components/Form"
 import Books from "./components/Books"
-import Header from "./components/Header"
-import Nav from "./components/Nav"
-import Footer from "./components/Footer"
+
 
 
 const apiKey = "AIzaSyDc84mT8wa9h5Tcf8Kp17u1z-6eq201eFQ";
@@ -31,31 +23,15 @@ class App extends Component {
   }
   render() {
     return (
-      <Router>
-        <div className="App">
-          <header>
-            <Header />
-          </header>
 
-          <nav>
-            <Nav />
-          </nav>
+
 
           <main>
-            <Switch>
-              <Route path="/booklib" exact component={BookLib} />
-              <Route path="/" exact component={Home} />
-            </Switch>
             <Form getBook={this.getBook} />
             <Books books={this.state.books} />
           </main>
 
-          <footer>
-            <Footer />
-          </footer>
-
-        </div>
-      </Router>
+        
     );
   }
 }
