@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
-
+function added() {
+  alert('Boken lades till i ditt bibliotek');
+}
 
 const Books = props => (
 
@@ -20,7 +22,7 @@ const Books = props => (
               state: { book: book.volumeInfo.title }
               }} >Visa bok</Link>
             </button> 
-            <button>Lägg till i bibliotek</button>
+            <button onClick={added}>Lägg till i bibliotek</button>
           </div>
         )
       })}
