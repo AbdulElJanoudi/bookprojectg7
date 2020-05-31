@@ -24,7 +24,7 @@ const Books = props => (
               state: { book: book.volumeInfo.title }
               }} >Visa bok</Link>
             </button> 
-            <button onClick={added}>Lägg till i bibliotek</button>
+            <button id="addBtn" onClick={added}>Lägg till i bibliotek</button>
           </div>
         )
       })}
