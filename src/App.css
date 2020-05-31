@@ -4,6 +4,15 @@ body {
     font-family: 'Oswald', sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: rgb(255, 253, 253)
+}
+
+a:hover {
+    color: rgb(112, 112, 112)
+}
+
 .App {
     text-align: center;
     display: grid;

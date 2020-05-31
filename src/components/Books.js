@@ -1,9 +1,10 @@
 import React from 'react';
-
 import { Link } from "react-router-dom";
 
 
+
 const Books = props => (
+
     <div id="wrapper">
         {props.books.map((book) =>{
         return (
@@ -19,6 +20,7 @@ const Books = props => (
               state: { book: book.volumeInfo.title }
               }} >Visa bok</Link>
             </button> 
+            <button>Lägg till i bibliotek</button>
           </div>
         )
       })}
