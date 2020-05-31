@@ -10,7 +10,6 @@ const apiKey = "AIzaSyDc84mT8wa9h5Tcf8Kp17u1z-6eq201eFQ";
 class App extends Component {
   state = {
     books: [],
-
     error: null
   }
   getBook = async (e) => {
@@ -21,8 +20,10 @@ class App extends Component {
 
     if (!bookName) {
       this.setState({ error: "Vänligen fyll i sökfältet"})
+    } else if (!data.items) {
+      this.setState ({ error: "Inga böcker hittades"})
     } else {
-      this.setState({books: data.items, error: null })
+      this.setState({books: data.items, error: null})
     }
   }
   render() {
