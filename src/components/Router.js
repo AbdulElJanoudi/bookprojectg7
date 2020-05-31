@@ -5,32 +5,34 @@ import Nav from "./Nav"
 import Footer from "./Footer"
 
 import App from "../App";
-import Book  from "./Book";
+import Book from "./Book";
 import BookLib from "./BookLib"
 
 const Router = () => (
-    <BrowserRouter>
-        <div className="App">
-          <header>
-            <Header />
-          </header>
+  <BrowserRouter>
+    <div className="App">
+      <header>
+        <Header />
+      </header>
 
-          <nav>
-            <Nav />
-          </nav>
+      <nav>
+        <Nav />
+      </nav>
+      <main>
         <Switch>
-            <Route path ="/" component = {App} exact />
-            <Route path ="/book/:id" component = {Book} />   
-            <Route path="/booklib" exact component={BookLib} />
+          <Route path="/" component={App} exact />
+          <Route path="/book/:id" component={Book} />
+          <Route path="/booklib" exact component={BookLib} />
         </Switch>
-        <footer>
-            <Footer />
-          </footer>
+      </main>
+      <footer>
+        <Footer />
+      </footer>
 
-        </div>
-    </BrowserRouter>
+    </div>
+  </BrowserRouter>
 
-    
+
 );
 
 export default Router;

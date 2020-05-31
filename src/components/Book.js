@@ -7,24 +7,25 @@ class Book extends React.Component {
         activeBook: []
     }
     componentDidMount = async () => {
-    const title = this.props.location.state.book;
-    const request = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${title}&key=${apiKey}`);
+        const title = this.props.location.state.book;
+        const request = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${title}&key=${apiKey}`);
 
 
-    const respond = await request.json();
-    this.setState ({ activeBook: respond.items[0]});
-    console.log(this.state.activeBook)
- 
-   }
+        const respond = await request.json();
+        this.setState({ activeBook: respond.items[0] });
+        console.log(this.state.activeBook)
+
+    }
 
     render() {
         const book = this.state.activeBook;
         return (
             <div className="container">
                 <div className="active-book">
-                <img src={book.volumeInfo?.imageLinks.thumbnail} alt="A book cover" />
-                Publisher: <span>{book.volumeInfo?.authors}</span>
-                <p>Länk: <span><a href={book.volumeInfo?.infoLink}>{book.volumeInfo?.title}</a></span> </p>
+                    <img src={book.volumeInfo?.imageLinks.thumbnail} alt="A book cover" />
+                    <br />
+                Utgivare: <span>{book.volumeInfo?.authors}</span>
+                    <p>Länk: <span><a href={book.volumeInfo?.infoLink}>{book.volumeInfo?.title}</a></span> </p>
 
                 </div>
             </div>

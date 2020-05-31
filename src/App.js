@@ -26,12 +26,13 @@ class App extends Component {
 
 
 
-          <main>
-            <Form getBook={this.getBook} />
-            <Books books={this.state.books} />
-          </main>
+      <div>
+        <h2> Hitta böcker</h2>
+        <Form getBook={this.getBook} />
+        <Books books={this.state.books} />
+      </div>
 
-        
+
     );
   }
 }
