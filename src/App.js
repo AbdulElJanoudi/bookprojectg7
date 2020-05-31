@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import Form from "./components/Form"
 import Books from "./components/Books"
-import { thistle } from 'color-name';
-
-
 
 const apiKey = "AIzaSyDc84mT8wa9h5Tcf8Kp17u1z-6eq201eFQ";
 
@@ -25,12 +22,14 @@ class App extends Component {
     } else {
       this.setState({books: data.items, error: null})
     }
+
+    console.log(this.state.books);
   }
+  
   render() {
     return (
           <main>
             <Form getBook={this.getBook} />
-          
             {
               this.state.error !== null ? 
               <div id="errorMsg">
