@@ -26,6 +26,16 @@ header {
     background-color: rgb(156, 144, 144);
 }
 
+figure {
+    text-align: center;
+    font-style: italic;
+    font-size: smaller;
+    text-indent: 0;
+    border: thin silver solid;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+
 nav {
     grid-area: nav;
     display: flex;
@@ -102,7 +112,7 @@ footer {
     font-size: 20px
 }
 
-#addBtn{
+#addBtn {
     background-color: chartreuse;
     cursor: pointer;
 }
@@ -110,7 +120,7 @@ footer {
 #wrapper {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -148,7 +158,12 @@ footer {
         margin-left: 15px;
     }
     #wrapper {
-        max-width: 500px;
+        max-width: fit-content;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    #book_container {
+        width: 150px;
     }
 }
 
@@ -190,5 +205,8 @@ footer {
     }
     footer {
         padding: 10px;
+    }
+    #wrapper {
+        max-width: fit-content;
     }
 }

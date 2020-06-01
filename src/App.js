@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Form from "./components/Form"
 import Books from "./components/Books"
+import BookLib from "./components/BookLib"
 
 const apiKey = "AIzaSyDc84mT8wa9h5Tcf8Kp17u1z-6eq201eFQ";
 
@@ -25,10 +26,7 @@ class App extends Component {
       this.setState({ books: data.items, error: null })
     }
   
-  for (const theEntireBook of this.state.books) {
-    let allMyIds = theEntireBook.id;
-    return allMyIds
-  }
+
 }
 
   render() {
@@ -42,7 +40,14 @@ class App extends Component {
             </div> : <Books books={this.state.books} />
         }
 
+  
+        <BookLib />
+
+ 
       </main>
+
+  
+      
     );
   }
 }
