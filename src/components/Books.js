@@ -23,17 +23,23 @@ const Books = props => (
               state: { book: book.volumeInfo.title }
             }} >Visa bok</Link>
           </button>
+
           <button onClick={added} id="addBtn">
-            Lägg till i bibliotek
+            Lägg till bok
             </button>
         </figure>
       )
 
+
+
+
       function added() {
-        var data  = localStorage.getItem('myBookId');
+        window.alert("Boken lades till (Uppdatera sidan för att se)")
+        var data = localStorage.getItem('myBookId');
         var allMyIds = data ? JSON.parse(data) : [];
         allMyIds.push(book.id)
-        localStorage.setItem('myBookId', JSON.stringify(allMyIds));  
+        localStorage.setItem('myBookId', JSON.stringify(allMyIds));
+
       }
     })}
   </div>

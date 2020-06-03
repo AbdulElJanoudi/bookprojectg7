@@ -22,6 +22,7 @@ class Book extends React.Component {
         return (
             <div className="container">
                 <div className="active-book">
+                  
                     <img src={book.volumeInfo?.imageLinks.thumbnail} alt="A book cover" />
                     <br />
                 Utgivare: <span>{book.volumeInfo?.authors}</span>

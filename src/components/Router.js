@@ -1,8 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Header from "./Header"
-import Nav from "./Nav"
-import Footer from "./Footer"
+import Saved from "./Saved"
 
 import App from "../App";
 import Book from "./Book";
@@ -15,9 +14,6 @@ const Router = () => (
         <Header />
       </header>
 
-      <nav>
-        <Nav />
-      </nav>
       <main>
         <Switch>
           <Route path="/" component={App} exact />
@@ -26,7 +22,7 @@ const Router = () => (
         </Switch>
       </main>
       <footer>
-        <Footer />
+        <Saved />
       </footer>
 
     </div>
