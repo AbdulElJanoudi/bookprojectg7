@@ -25,7 +25,6 @@ async function getMyBooks() {
             myP.innerHTML = (myData.content.volumeInfo.title)
             img.src = (myData.content.volumeInfo.imageLinks.thumbnail)
 
-
             document.body.appendChild(myDiv)
             myDiv.appendChild(myFigure)
 
@@ -36,7 +35,7 @@ async function getMyBooks() {
 }
 export default function BookLib() {
     return (
-
+        
         <> </>
 
     );

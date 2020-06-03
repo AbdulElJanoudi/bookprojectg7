@@ -30,9 +30,6 @@ const Books = props => (
         </figure>
       )
 
-
-
-
       function added() {
         window.alert("Boken lades till (Uppdatera sidan för att se)")
         var data = localStorage.getItem('myBookId');
