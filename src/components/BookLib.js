@@ -1,9 +1,6 @@
-
 import React from 'react'
 
-
 var myData = {}
-
 
 async function getMyBooks() {
     for (var i = 0; i < localStorage.length; i++) {
@@ -24,20 +21,16 @@ async function getMyBooks() {
             myFigure.appendChild(myP)
             myP.innerHTML = (myData.content.volumeInfo.title)
             img.src = (myData.content.volumeInfo.imageLinks.thumbnail)
-
             document.body.appendChild(myDiv)
             myDiv.appendChild(myFigure)
-
-
         }
     }
-
 }
+
 export default function BookLib() {
+    getMyBooks()
     return (
-        
         <> </>
-
-    );
+    );  
 }
-getMyBooks()
+
